@@ -1,9 +1,12 @@
-Универсальный ответ для русскоговорящих политиков etc.
+UltimateSpeech
+============
+
+ниверсальный ответ для русскоговорящих политиков etc.
 
 1. Заинсталить
 ---------------
 
-    gem 'ultimate_speech', :git => 'git@github.com:komba/ultimate_speech.git'
+    $ gem 'ultimate_speech', :git => 'git@github.com:komba/ultimate_speech.git'
 
 2. Сгенерировать
 -----------------
