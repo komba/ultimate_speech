@@ -27,7 +27,7 @@ module UltimateSpeech
       ['first', 'second', 'third', 'four'].each do |type|
         sentence << I18n.t("ultimate.speech.#{type}").split('| ').shuffle.first
       end
-      sentence << '.'
+      sentence << '. '
     end
   end
 end
