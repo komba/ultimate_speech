@@ -24,7 +24,7 @@ describe UltimateSpeech::Base do
     end
 
     it 'should have a dot at end of sentence' do
-      sentence.scan(/(\.{1})\z/).first.should_not be_nil
+      sentence.scan(/(\.{1}\ )\z/).first.should_not be_nil
     end
   end
 end

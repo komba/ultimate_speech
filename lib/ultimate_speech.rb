@@ -15,19 +15,11 @@ module UltimateSpeech
 
   class Base
     def self.generate(sentences=SENTENCES_COUNT)
-      speech = ''
-      sentences.times do
-        speech << self.make_sentence
-      end
-      speech
+      Array.new(sentences) { self.make_sentence }.join
     end
 
     def self.make_sentence
-      sentence = ''
-      ['first', 'second', 'third', 'four'].each do |type|
-        sentence << I18n.t("ultimate.speech.#{type}").split('| ').shuffle.first
-      end
-      sentence << '. '
+      ['first', 'second', 'third', 'four'].map{|type| I18n.t("ultimate.speech.#{type}").split('| ').shuffle.first }.join << '. '
     end
   end
 end
