@@ -14,12 +14,14 @@ module UltimateSpeech
   end
 
   class Base
-    def self.generate(sentences=SENTENCES_COUNT)
-      Array.new(sentences) { self.make_sentence }.join
-    end
+    class << self
+      def generate(sentences=SENTENCES_COUNT)
+        Array.new(sentences){ make_sentence }.join
+      end
 
-    def self.make_sentence
-      ['first', 'second', 'third', 'four'].map{|type| I18n.t("ultimate.speech.#{type}").split('| ').shuffle.first }.join << '. '
+      def make_sentence
+        ['first', 'second', 'third', 'four'].map{|type| I18n.t("ultimate.speech.#{type}").split('| ').shuffle.first }.join << '. '
+      end
     end
   end
 end
